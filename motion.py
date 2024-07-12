@@ -41,7 +41,7 @@ def find_blue_cursor_position(frame):
                 m=1
                 motions==frame
                 return (xx, yy)
-            
+    motions==frame        
     m=1        
     return None
             
