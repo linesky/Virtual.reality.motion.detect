@@ -37,7 +37,7 @@ def find_blue_cursor_position(frame):
                 g=green_channel-green_channel1
             else:
                 g=green_channel1-green_channel
-            if b>60 or g>60 or r>60 :
+            if b>96 or g>96 or r>96 :
                 m=1
                 motions==frame
                 return (xx, yy)
@@ -66,7 +66,7 @@ def main():
 
         # Desenhar o cursor virtual (bola vermelha) se a posição foi encontrada
         if position is not None:
-            cv2.circle(frame, position, 10, (0, 0, 255), -1)
+            cv2.circle(frame, position, 10, (255, 255, 255), -1)
 
         # Mostrar a imagem
         cv2.imshow('Augmented Reality - Blue Cursor Detection', frame)
